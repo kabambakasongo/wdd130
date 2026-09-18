@@ -1,3 +1,18 @@
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: Times New Roman, Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -35,6 +50,10 @@ article {
     text-decoration: none;
 }
 
+.hero {
+    position: relative;
+}
+
 .hero img {
     display: block;
     width: 100%;
@@ -55,7 +74,6 @@ h1 {
 
 .hero article img {
     float: right;
-
     width: 125px;
 
 }
