@@ -3,8 +3,6 @@
     --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
-    --heading-font: Times New Roman, Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
 
 }
 
@@ -52,6 +50,11 @@ article {
 
 .hero {
     position: relative;
+}
+
+.hero article {
+    position: absolute;
+
 }
 
 .hero img {
