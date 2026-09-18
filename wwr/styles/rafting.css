@@ -54,7 +54,14 @@ article {
 
 .hero article {
     position: absolute;
-
+    top: 150px;
+    /* or bottom, depending on where you want it placed */
+    left: 50px;
+    /* or right */
+    background-color: var(--accent1-color);
+    /* or a semi-transparent color */
+    padding: 1rem;
+    /* other styling as specified in your assignment */
 }
 
 .hero img {
