@@ -44,6 +44,19 @@ article {
 
 }
 
+nav a {
+    color: var(--secondary-color);
+}
+
+/* or */
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+section {
+    background-color: var(--secondary-color);
+}
+
 .socialmedia a {
     text-decoration: none;
 }
@@ -58,8 +71,8 @@ article {
     /* or bottom, depending on where you want it placed */
     left: 50px;
     /* or right */
-    background-color: var(--accent1-color);
     /* or a semi-transparent color */
+    background-color: var(--secondary-color);
     padding: 1rem;
     /* other styling as specified in your assignment */
 }
