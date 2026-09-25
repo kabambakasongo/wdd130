@@ -3,12 +3,8 @@
     --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
-
-}
-
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -18,15 +14,41 @@ header {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--body-font);
     background-color: var(--accent1-color);
+    color: #fff;
+    max-width: 840px;
+    margin: 0 auto;
 }
 
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
+header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+}
+
+header img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
 }
 
 h1,
@@ -35,46 +57,8 @@ h2 {
     color: var(--primary-color);
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-
-}
-
-nav a {
-    color: var(--secondary-color);
-}
-
-/* or */
-nav a:hover {
-    background-color: var(--secondary-color);
-}
-
-section {
-    background-color: var(--secondary-color);
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
 .hero {
     position: relative;
-}
-
-.hero article {
-    position: absolute;
-    top: 150px;
-    /* or bottom, depending on where you want it placed */
-    left: 50px;
-    /* or right */
-    /* or a semi-transparent color */
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    /* other styling as specified in your assignment */
 }
 
 .hero img {
@@ -83,20 +67,111 @@ section {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
-    top: 20px;
+    top: 10px;
+    left: 0;
     width: 100%;
-    padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
+    background-color: rgba(38, 70, 83, 0.75);
     color: #fff;
+    padding: 1rem;
+}
 
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(38, 70, 83, 0.8);
+    color: #fff;
+    padding: 1rem;
 }
 
 .hero article img {
     float: right;
     width: 125px;
+    margin-left: 1rem;
+}
 
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.history p {
+    line-height: 1.6;
+}
+
+.history img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.adventures {
+    padding: 2rem;
+}
+
+.adventures h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery figure {
+    flex: 1;
+    text-align: center;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery figcaption {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 0.5rem 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 40px;
+    height: 40px;
 }
