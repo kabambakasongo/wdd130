@@ -3,8 +3,8 @@
     --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
-    --heading-font: 'Montserrat', sans-serif;
-    --body-font: 'Roboto', sans-serif;
+    --heading-font: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+    --body-font: system-ui, 'Segoe UI', Tahoma, sans-serif;
 }
 
 * {
