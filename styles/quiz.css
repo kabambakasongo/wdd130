@@ -1,0 +1,80 @@
+:root {
+    --font-body: Arial, Helvetica, sans-serif;
+    --text-dark: #333;
+    --background-color: #fff;
+    --primary-color: #235789;
+    --secondary-color: #8ea9c1;
+    --accent1-color: #c9d6e3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+form {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid var(--accent1-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: 0.5rem;
+    border: 1px solid #999;
+    border-radius: 0.25rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
