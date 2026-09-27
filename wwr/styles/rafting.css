@@ -57,6 +57,12 @@ h2 {
     color: var(--primary-color);
 }
 
+/* Headings sit on the dark page background outside .contact, so the dark
+   primary color fails AA there. Use the light accent instead. */
+main:not(.contact) h2 {
+    color: var(--accent2-color);
+}
+
 .hero {
     position: relative;
 }
@@ -147,6 +153,11 @@ h2 {
     font-weight: 700;
     color: var(--secondary-color);
     padding: 0.5rem 0;
+}
+
+/* The secondary color is too light on the pale .contact background. */
+main.contact .gallery figcaption {
+    color: #8a4b00;
 }
 
 main.contact {
