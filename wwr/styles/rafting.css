@@ -13,6 +13,22 @@
     box-sizing: border-box;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--body-font);
     background-color: var(--accent1-color);
@@ -59,12 +75,15 @@ h2 {
 
 /* Headings sit on the dark page background outside .contact, so the dark
    primary color fails AA there. Use the light accent instead. */
+main:not(.contact) h1,
 main:not(.contact) h2 {
     color: var(--accent2-color);
 }
 
 .hero {
     position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
 }
 
 .hero img {
@@ -73,13 +92,13 @@ main:not(.contact) h2 {
     height: auto;
 }
 
-.hero h1 {
+main .hero h1 {
     position: absolute;
     top: 10px;
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(38, 70, 83, 0.75);
+    background-color: rgba(38, 70, 83, 0.85);
     color: #fff;
     padding: 1rem;
 }
@@ -293,8 +312,233 @@ footer p {
     height: 40px;
 }
 
+/* ---------- Home page ---------- */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.intro h2 {
+    margin-bottom: 0.5rem;
+}
+
+.intro p {
+    line-height: 1.6;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+}
+
+.grid-content figure {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+
+.grid-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grid-content figcaption {
+    line-height: 1.6;
+    padding: 0.75rem 1rem;
+}
+
+.grid-content .card-title {
+    display: block;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--accent2-color);
+    margin-bottom: 0.25rem;
+}
+
+.newsletter {
+    background-color: var(--accent2-color);
+    color: #222;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: var(--accent1-color);
+}
+
+.newsletter p {
+    margin-bottom: 1rem;
+}
+
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.newsletter .form-group {
+    flex: 1 1 200px;
+}
+
+.newsletter label {
+    color: var(--accent1-color);
+}
+
+.newsletter input[type='text'],
+.newsletter input[type='email'] {
+    width: 100%;
+}
+
+.cta {
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.cta p {
+    margin: 0.5rem 0 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: var(--accent2-color);
+}
+
+/* ---------- Trips page ---------- */
+
+.trips h1,
+.trips .trips-lead {
+    text-align: center;
+    padding: 2rem 2rem 0;
+}
+
+.trips .trips-lead {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.trip-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 2rem 2rem;
+}
+
+.trip-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.trip-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.trip-info {
+    padding: 1rem;
+}
+
+.trip-info h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.trip-info p {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.trip-table {
+    padding: 0 2rem 2rem;
+}
+
+.trip-table h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.trip-table caption {
+    caption-side: bottom;
+    padding-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--accent2-color);
+}
+
+.trip-table th,
+.trip-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trip-table thead th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: var(--heading-font);
+}
+
+.trip-table tbody th {
+    font-family: var(--heading-font);
+    color: var(--accent2-color);
+}
+
+.trip-table tbody tr:last-child th,
+.trip-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
 @media (max-width: 700px) {
-    .contact-grid {
+    .contact-grid,
+    .intro,
+    .grid-content {
         grid-template-columns: 1fr;
+    }
+
+    .trip-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+    .gallery figure {
+        flex: 1 1 45%;
     }
 }
